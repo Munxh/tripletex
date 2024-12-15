@@ -1,0 +1,28 @@
+module.exports = {
+    extends: ['eslint-config-prettier', 'plugin:@typescript-eslint/recommended'],
+    plugins: ['prettier', '@typescript-eslint', 'react-native', 'import'],
+    parserOptions: {
+        project: './tsconfig.json',
+        tsconfigRootDir: __dirname,
+    },
+    ignorePatterns: ['.eslintrc.js', "**/node_modules/*", "**/app-example/*"],
+    rules: {
+        'react-native/no-unused-styles': 'error',
+        'no-use-before-define': 'off',
+        '@typescript-eslint/no-use-before-define': ['error', {variables: false, typedefs: false}],
+        '@typescript-eslint/no-unused-expressions': 'error',
+        '@typescript-eslint/array-type': 'error',
+        '@typescript-eslint/no-unused-vars': ['error', {varsIgnorePattern: '_'}],
+        'no-unused-expressions': 'off',
+        'global-require': 'off',
+        'react/jsx-props-no-spreading': 'off',
+        'prettier/prettier': 'off',
+        quotes: ['error', 'single', {avoidEscape: true}],
+        semi: ['error', 'always'],
+        'no-mixed-operators': 'error',
+        '@typescript-eslint/consistent-type-imports': 'error',
+        'no-duplicate-imports': 'off',
+        '@typescript-eslint/no-empty-interface': 'error',
+        "import/no-duplicates": 'error',
+    },
+};
