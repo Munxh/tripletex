@@ -47,7 +47,7 @@ const GitHubRepos: React.FC = () => {
     cacheTime: Infinity, // improvements, could set a cache time to avoid fetching the same data too often
   });
 
-  if (isLoading) {
+  if (isLoading) { // could use activity indicator instead of text
     return (
       <SafeAreaView style={styles.container}>
         <Text style={styles.loadingText}>Loading...</Text>
@@ -140,8 +140,8 @@ const GitHubRepos: React.FC = () => {
                     Watchers Count: {selectedRepo.watchers_count}
                   </Text>
                 )}{' '}
-                // this number seems to be wrong, its always the same as the
-                number of stars
+                {/* this number seems to be wrong, it's always the same as the
+                number of stars */}
                 {selectedRepo.open_issues_count && (
                   <Text style={styles.modalText}>
                     Open Issues Count: {selectedRepo.open_issues_count}

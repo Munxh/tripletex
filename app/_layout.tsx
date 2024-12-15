@@ -1,5 +1,10 @@
 import { Stack } from 'expo-router';
+import ReactQuerySetup from '@/app/ReactQuerySetup';
 
 export default function RootLayout() {
-  return <Stack screenOptions={{ headerShown: false}} />;
+  return (
+    <ReactQuerySetup>
+      <Stack screenOptions={{ headerShown: false }} />
+    </ReactQuerySetup>
+  );
 }
